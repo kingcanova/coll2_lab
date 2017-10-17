@@ -11,7 +11,7 @@ CC=mpicc
 
 #
 # Now define the list of C files which are part of our project
-CFILES=monte-carlo-pi.c	timer.c
+CFILES=mpi_pi.c	timer.c
 #
 # From the CFILES, obtain OFILES, a list of objects
 OFILES=$(CFILES:.c=.o)
@@ -35,4 +35,4 @@ timer.o:	timer.h
 # we often provide a "clean" rule.  This rule has no dependencies, and
 # the statements are always executed when someone executes "make clean"
 clean::
-	/bin/rm main monte-carlo-pi.o	timer.o
+	/bin/rm main mpi_pi.o	timer.o

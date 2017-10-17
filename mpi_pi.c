@@ -1,7 +1,7 @@
 /*
   @author     Keith Grable, Tristan Canova
-  @version    2017-10-16
-  @file       monte-carlo-pi.c
+  @version    2017-10-17
+  @file       mpi_pi.c
 */
 
 #include <stdlib.h>
@@ -14,6 +14,8 @@
 int main(int argc, char *argv[])
 {
   int rank, numprocs;
+
+  int err;
 
   long numpoints;
   long circlepoints = 0;
@@ -31,20 +33,27 @@ int main(int argc, char *argv[])
     MPI_Abort(MPI_COMM_WORLD, 1);
   }
 
-  numpoints = atol(argv[1]);
+  MPI_Comm_rank(MPI_COMM_WORLD,&rank);
+  MPI_Comm_size(MPI_COMM_WORLD,&numprocs);
 
+  if(rank == 0)
+  {
+    numpoints = atol(argv[1]);
+    err = errno;
+  }
 
+  //stampede2 passes an error despite successfully reading in argv[1]
   /*
-  if(errno)
+  MPI_Bcast(&err, 1, MPI_INT, 0, MPI_COMM_WORLD)
+
+  if(err)
   {
     fprintf(stderr, "Usage: %s invalid format for numpoints, you inputted %ld\n", argv[0], numpoints);
     MPI_Abort(MPI_COMM_WORLD, 1);
   }
   */
 
-
-  MPI_Comm_rank(MPI_COMM_WORLD,&rank);
-  MPI_Comm_size(MPI_COMM_WORLD,&numprocs);
+  MPI_Bcast(&numpoints, 1, MPI_LONG, 0, MPI_COMM_WORLD);
   
   /* Set up random seed */
   struct timeval time;
