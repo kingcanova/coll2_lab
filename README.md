@@ -1,2 +1,2 @@
-# coll2_lab
-Cus we cant both connect to the private repo
+# coll2-lab
+More Collective Communications lab
