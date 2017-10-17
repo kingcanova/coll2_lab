@@ -1,0 +1,35 @@
+Will use 1000000 points per process
+[4] 785709 in circle, pi approx = 3.142836
+[5] 786120 in circle, pi approx = 3.144480
+[10] 785474 in circle, pi approx = 3.141896
+[12] 785378 in circle, pi approx = 3.141512
+[15] 785199 in circle, pi approx = 3.140796
+[16] 785561 in circle, pi approx = 3.142244
+[17] 784979 in circle, pi approx = 3.139916
+[20] 786258 in circle, pi approx = 3.145032
+[22] 785199 in circle, pi approx = 3.140796
+[30] 784849 in circle, pi approx = 3.139396
+[0] 785790 in circle, pi approx = 3.143160
+[1] 785116 in circle, pi approx = 3.140464
+[2] 785331 in circle, pi approx = 3.141324
+[3] 785695 in circle, pi approx = 3.142780
+[6] 785019 in circle, pi approx = 3.140076
+[7] 785588 in circle, pi approx = 3.142352
+[8] 785913 in circle, pi approx = 3.143652
+[9] 784562 in circle, pi approx = 3.138248
+[11] 784840 in circle, pi approx = 3.139360
+[13] 785206 in circle, pi approx = 3.140824
+[14] 785097 in circle, pi approx = 3.140388
+[18] 785136 in circle, pi approx = 3.140544
+[19] 785462 in circle, pi approx = 3.141848
+[21] 785458 in circle, pi approx = 3.141832
+[23] 785365 in circle, pi approx = 3.141460
+[24] 785426 in circle, pi approx = 3.141704
+[25] 785014 in circle, pi approx = 3.140056
+[26] 785790 in circle, pi approx = 3.143160
+[27] 785448 in circle, pi approx = 3.141792
+[28] 784778 in circle, pi approx = 3.139112
+[29] 785448 in circle, pi approx = 3.141792
+[31] 785558 in circle, pi approx = 3.142232
+in circle values range from 784562 to 786258
+Final approximation of pi: 3.141471

@@ -33,15 +33,18 @@ int main(int argc, char *argv[])
 
   numpoints = atol(argv[1]);
 
+
+  /*
   if(errno)
   {
-    fprintf(stderr, "Usage: %s invalid format for numpoints\n", argv[0]);
+    fprintf(stderr, "Usage: %s invalid format for numpoints, you inputted %ld\n", argv[0], numpoints);
     MPI_Abort(MPI_COMM_WORLD, 1);
   }
-  
+  */
+
+
   MPI_Comm_rank(MPI_COMM_WORLD,&rank);
   MPI_Comm_size(MPI_COMM_WORLD,&numprocs);
-
   
   /* Set up random seed */
   struct timeval time;
