@@ -14,7 +14,7 @@
 int main(int argc, char *argv[])
 {
   int rank, numprocs;
-  int numpoints;
+  long numpoints;
   
   MPI_Init(&argc, &argv);
   
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     MPI_Abort(MPI_COMM_WORLD, 1);
   }
 
-  numpoints = atoi(argv[1]);
+  numpoints = atol(argv[1]);
 
   if(errno)
   {
