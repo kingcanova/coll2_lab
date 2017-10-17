@@ -1,7 +1,7 @@
 /*
-  @author Keith Grable, Tristan Canova
-  @version 2017-10-16
-  @file monte-carlo-pi.c
+  @author     Keith Grable, Tristan Canova
+  @version    2017-10-16
+  @file       monte-carlo-pi.c
 */
 
 #include <stdlib.h>
@@ -40,8 +40,10 @@ int main(int argc, char *argv[])
   struct timeval time;
   gettimeofday(&time, NULL);
   srand48((unsigned int)time.tv_usec + rank);
-
-  printf("%5.9f\n", drand48());
+  
+  /* Compute pi */
+  if(rank == 0)
+    printf("Will use %d points per process\n", numpoints);
   
   MPI_Finalize();
   
