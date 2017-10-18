@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
     myArr[i] = x;
   }
 
+  //Then scan all of the arrays to get a prefix sum answer and put it into finalArray so that proc 0 can print it
   MPI_Scan(&myArr,&finalArr,numprocs,MPI_Int,MPI_SUM,MPI_COMM_WORLD);
   printf("The prefix sums are as follows \n");
   if(rank == 0)
